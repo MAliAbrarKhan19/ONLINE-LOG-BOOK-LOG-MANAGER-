@@ -1,8 +1,6 @@
 
-<!-- --------------------------------------Footer ----------------------------------------- -->
-        <!-- =========================================
-                          Footer
-        ============================================ -->
+<!--Footer -->
+       
         <div class="row"  style="margin-top: 2px;">
             <div class="col-md-12 navbar navbar-expand-lg navbar-dark bg-secondary "><!-- fixed-bottom -->
               <a class="text-white" href="#">&copy; Copyright by LOG Manager. Developed by Ananya Saha ID-112</a>
