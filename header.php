@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-    <head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Blood Donator Finder</title>
-    </head>
+    <title>Log Manager </title>
+  </head>
   <body>
 
     <div class="container-fluid">
-    <!-- =========================================
-                          Nav bar
-        ============================================ -->
+    <!-- =========================================Nav bar ============================================ -->
 
           <div class="row bg-secondary">
             <div class="col-md-12">
@@ -25,7 +23,8 @@
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
-                  <a class="navbar-brand" href="./index.php">Log Manager</a>
+                      
+                      <a class="navbar-brand" href="./index.php">Log Manager</a>
 
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                       <ul class="navbar-nav mr-2 mt-2 mt-lg-0">
@@ -48,13 +47,11 @@
                 </nav>
 
 
+            </div>  
           </div>  
-          </div>  
 
-    <!-- ========================================= Nav bar============================================ -->
-
+    <!-- ========================================= Nav bar ============================================ -->
 
 
-
-        <!--Header -->
+        <!--------------------------------- Header Ends----------------------- -->
 
