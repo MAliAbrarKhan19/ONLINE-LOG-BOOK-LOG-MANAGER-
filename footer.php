@@ -1,11 +1,11 @@
 
 <!--Footer -->
        
-  <div class="row bg-secondary"  style="margin-top: 0px;">
+  <div class="row bg-dark"  style="margin-top: 0px;">
     <div class="col-md-8 offset-md-2 p-2 "><!-- fixed-bottom -->
-      <hr class=" bg-info">
-      <p  class="text-white text-center">
-     &copy; <?php echo date("Y"); ?> Copyright by LOG Manager.  <a class="text-white text-center" href="https://github.com/ananyasaha2468/ONLINE-LOG-BOOK-LOG-MANAGER">Developed by Ananya Saha ID-112</a>
+      <hr class=" bg-success">
+      <p  class="text-success text-center">
+     &copy; <?php echo date("Y"); ?> Copyright by LOG Manager.  <a class="text-success text-center" href="https://github.com/ananyasaha2468/ONLINE-LOG-BOOK-LOG-MANAGER">Developed by Ananya Saha ID-112</a>
       </p>
     </div>
   </div>
