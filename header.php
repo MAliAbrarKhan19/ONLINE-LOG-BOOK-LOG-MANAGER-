@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Log Manager </title>
+    <title>Log Manager</title>
   </head>
   <body>
 
@@ -32,13 +32,13 @@
                           <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                          <a class="nav-link" href="#">List </a>
+                          <a class="nav-link" href="list.php"> Log-Book </a>
                         </li>
-                        <li class="nav-item">
+                       <!--  <li class="nav-item">
                           <a class="nav-link" href="#">Staff Register</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="./admin.php">Admin</a>
+                        </li> -->
+                        <li class="nav-item disabled" >
+                          <a class="nav-link" href="./index.php"> Admin </a>
                         </li>
                         
                       </ul>

@@ -71,7 +71,6 @@ echo "<script type='text/javascript'>alert('Logged in successfully!!! ".$visitor
 
 ?>
 <!-- PHP Code ends -->
-
 <!--==============================================  Header ==================================== -->
 <?php include 'header.php'; ?>
 <!-- =============================================  Header   ======================================  -->
@@ -86,32 +85,16 @@ echo "<script type='text/javascript'>alert('Logged in successfully!!! ".$visitor
     <div class="bg-dark p-4">
 
 
-      <h1 class="my-1 mx-auto pt-3 pb-1 display-1 text-success text-center "><em>Log Manager</em></h1>
+      <h1 class="my-1 mx-auto pt-3 pb-1 display-1 text-success text-center "><em>Log Manager List</em></h1>
       <hr class="my-4 mx-auto bg-success" width="50%">
 
 
       <p class="m-1 pt-2 pb-1 lead text-light text-center">
-        The list below Displays all the visitors ordered by date:
+       The list below Displays all the visitors ordered by date:
       </p>
 
       <hr class="my-1 mx-1 bg-light">
-<?php 
-if (!empty($visitor_ticket_no)) {
-  
 
- ?>
-    <div class="row">
-      <div class="col offset-md-3 p-2 bg-light text-success text-center">
-        <h1 class="display-4 text-success"> <?php echo $visitor_ticket_no; ?></h1>
-        <form method="POST">
-          <input type="submit" name="ticketno" value="OK " class="btn btn-block btn-outline-success">
-        </form>
-      </div>
-    </div>
-
-<?php 
-}
- ?>
      <div class="row">
       <div class="col-md-6 offset-md-3  p-2 lead text-success text-center">
         <a class="btn btn-success btn-lg btn-block m-3" href="#" role="button" data-toggle="modal" data-target="#ModalVisitor">Visitor Login</a>
@@ -126,13 +109,96 @@ if (!empty($visitor_ticket_no)) {
 
 
 
+<div class="row bg-dark">
+  <div class="col-md-12 col-sm-12">
+    <div class="bg-dark p-4">
 
 
+      <h1 class="my-1 mx-auto pt-2 pb-1 text-success text-center "><em>Log Manager List</em></h1>
+		<hr class="my-1 mx-1 bg-light">
+		<!-- Table of Visitors -->
+		<table class="text-success table table-bordered-light">
+		  <thead>
+		    <tr>
+		      <th scope="col">Date</th>
+		      <th scope="col">Log Status</th>
+		      <th scope="col">Login Time | Logout Time</th>
+		      <th scope="col">Name </th>
+		      <th scope="col">Details</th>
+		      
+		    </tr>
+		  </thead>
+		  <tbody>
+		    
+		  
+		<?php 
+			//<!-- INSERT INTO `visitors`(`visitor_id`, `visitor_name`, `visitor_gender`, `visitor_email`, `visitor_mobile`, `visitor_purpose`, `visitor_login_date`, `visitor_login_time`, `visitor_logout_date`, `visitor_logout_time`, `visitor_log_status`, `visitor_ticket_no`) VALUES -->
+
+			$query= "SELECT*FROM visitors ORDER BY visitor_login_date DESC";
+					            $result= mysqli_query($con, $query);
+					            $num_rows=mysqli_num_rows($result);
+					            
+					            if ($num_rows > 0){
+              						while ($row = mysqli_fetch_assoc($result)){
+		 ?>
+
+		 				<tr>
+					      <th scope="row"><?php echo $row['visitor_login_date']; ?></th>
+					      <td>
+					      	<p class="m-1">Status  :<?php echo $row['visitor_log_status']; ?> </p> 
+					      	<p class="m-1">Ticket no. :<?php echo $row['visitor_ticket_no']; ?> </p> 
+					      	
+					      	
+					      </td>
+					      <td><?php echo "From  ".$row['visitor_login_time']."  to ".$row['visitor_logout_time']; ?></td>
+					      <td><?php echo $row['visitor_name']; ?></td>
+					      <td>
+					      	<p class="m-1 lead ">Gender  :<?php echo $row['visitor_gender']; ?> </p> 
+					      	<p class="m-1 lead ">Mobile  :<?php echo $row['visitor_mobile']; ?> </p> 
+					      	<p class="m-1 lead ">Email   :<?php echo $row['visitor_email']; ?> </p>
+ 					      	<p class="m-1 lead ">Purpose :<?php echo $row['visitor_purpose']; ?> </p>
+					      	
+					      </td>
+					    </tr>
 
 
-    </div>
+		 <?php 
+		 							}
+		 						}
+
+		  ?>
+		   </tbody>
+		</table>
+		<!-- Table of Visitors -->
+
+		<hr class="my-1 mx-1 bg-light">
+	</div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Visitor Logout form -->
 <div class="row bg-dark">
   <div class="col-md-12">
@@ -282,9 +348,6 @@ if (!empty($visitor_ticket_no)) {
   </div>
 </div>
 <!-- //Login Form// -->
-
-
-
 
 
 <!-- 
